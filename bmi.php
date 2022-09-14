@@ -41,7 +41,16 @@
 
       $bmi = $weight / ($height * $height);
 
-      echo $bmi;
+      if ($bmi <=18.5){
+        echo "$name, you are underweight! You should gain some weight!";
+
+      }elseif ($bmi<=24.9){
+        echo "$name, you are in the healthy weight range.";
+      }elseif($bmi<=29.9){
+        echo "$name, you are in the overweight range. Do some diet";
+      }else{
+        echo "$name, you are in the obese range! You should watch out your diet!";
+      }
 
 
        ?>

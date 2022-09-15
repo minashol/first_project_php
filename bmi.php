@@ -12,6 +12,8 @@
 
       include "header.html";
 
+
+
       ?>
 
 
@@ -39,6 +41,10 @@
       $height = $_POST["height"];
       $weight = $_POST["kilos"];
 
+
+
+
+
       $bmi = $weight / ($height * $height);
       $bmi=round($bmi, 2);
       if ($bmi <=18.5){
@@ -56,6 +62,26 @@
        ?>
        <br>
        <a href="https://www.cdc.gov/healthyweight/assessing/bmi/index.html" target="_blank">Click here</a> for more information about BMI.<br>
+       <br>
+       Last entries: <br>
+
+       <table>
+         <tr>
+           <th> Name </th>
+           <th> Height </th>
+           <th> Weight </th>
+           <th> BMI </th>
+         </tr>
+         <tr>
+           <td> <?php echo $name; ?> </td>
+           <td> <?php echo $height; ?> </td>
+           <td> <?php echo $weight; ?> </td>
+           <td> <?php echo $bmi; ?> </td>
+         </tr>
+       </table>
+
+
+
 
 
       <?php
